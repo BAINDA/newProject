@@ -1,3 +1,6 @@
+import { trending_data } from "@/data/trending";
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="bg-[#013B94]">
@@ -20,7 +23,24 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex  space-x-4 py-5 overflow-x-scroll"></div>
+        <div className="flex space-x-4 py-5 overflow-x-scroll">
+          {trending_data.map((item) => (
+            <div key={item.id} className="space-y-1 shrink-0 cursor-pointer">
+              <Image
+                key={item.id}
+                className="w-80 h-72 object-cover rounded-lg pb-2"
+                src={item.src}
+                alt={item.title}
+                width={320} // Adjust the width as needed
+                height={288} // Adjust the height as needed
+              />
+
+              <p className="font-bold">{item.title}</p>
+              <p className="">{item.location}</p>
+              <p className="font-light text-sm">{item.description}</p>
+            </div>
+          ))}
+        </div>
       </section>
     </main>
   );

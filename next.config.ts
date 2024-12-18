@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["r-xx.bstatic.com", "cf.bstatic.com"],
+  },
 };
 
 export default nextConfig;
