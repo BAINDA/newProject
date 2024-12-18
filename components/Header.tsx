@@ -20,8 +20,6 @@ import {
 import {
   ChevronDownIcon,
   HomeIcon,
-  icons,
-  Key,
   PhoneIcon,
   PlayCircleIcon,
 } from "lucide-react";
