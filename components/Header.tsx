@@ -237,6 +237,16 @@ function Header() {
                       </>
                     )}
                   </Disclosure>
+
+                  {NavBarOptions.map((navBar, index) => (
+                    <a
+                      key={index}
+                      href={navBar.href}
+                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800"
+                    >
+                      {navBar.name}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
